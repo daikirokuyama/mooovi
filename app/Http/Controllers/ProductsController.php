@@ -9,6 +9,11 @@ use App\Product;
 
 class ProductsController extends RankingController
 {
+    public function __construct()
+    {
+        parent::__construct();
+        $this->middleware('auth', ['only' => 'search']);
+    }
     public function index()
     {
         // productsテーブルから最新順に作品を20件取得する
