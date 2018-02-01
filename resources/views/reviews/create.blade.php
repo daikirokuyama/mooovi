@@ -38,7 +38,6 @@
             </div>
           </div>
             {{ Form::model($review, array('action' => array('ReviewsController@store', $product->id))) }}
-        'Html'      => Collective\Html\HtmlFacade::class,
           <div style="margin: 8px 0">
             {{ Form::label('rate', '評価', ['style' =>  'margin-right:8;']) }}
             {{ Form::selectRange('rate', 1, 10, ['placeholder' => '評価', 'class' => 'searh__query', 'style' => 'text-align: right;']) }}
