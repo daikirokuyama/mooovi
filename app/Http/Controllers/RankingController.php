@@ -22,6 +22,7 @@ class RankingController extends Controller
             return Product::find($ele->product_id);
         });
 
+
         View::share('ranking', $productRanks);
     }
 }
