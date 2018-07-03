@@ -16,6 +16,7 @@ class ProductsController extends RankingController
     }
     public function index()
     {
+        dd(env('hoge'));
         // productsテーブルから最新順に作品を20件取得する
         $products = Product::orderBy('id', 'ASC')->take(20)->get();
         return view('products.index')->with('products', $products);
