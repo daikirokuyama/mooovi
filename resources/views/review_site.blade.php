@@ -3,8 +3,13 @@
   <head>
     <meta charset="utf-8">
       <title>映画レビューサイト</title>
-      <link href="{{ secure_asset('stylesheets/css/review_site.css')}}" rel='stylesheet' type='text/css'>
-      <link href="{{ secure_asset('stylesheets/css/font-awesome.css')}}" rel='stylesheet' type='text/css'>
+      @if(env('APP_ENV') == 'production')
+        <link href="{{ secure_asset('stylesheets/css/review_site.css')}}" rel='stylesheet' type='text/css'>
+        <link href="{{ secure_asset('stylesheets/css/font-awesome.css')}}" rel='stylesheet' type='text/css'>
+      @else 
+        <link href="{{ asset('stylesheets/css/review_site.css')}}" rel='stylesheet' type='text/css'>
+        <link href="{{ asset('stylesheets/css/font-awesome.css')}}" rel='stylesheet' type='text/css'>
+      @endif
     </meta>
   </head>
   <body class="yj950-2">
