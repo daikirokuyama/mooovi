@@ -28,7 +28,8 @@ class ReviewsController extends RankingController
         Review::create([
           'rate'       => $request->rate,
           'review'     => $request->review,
-          'product_id' => $id
+          'product_id' => $id,
+          'user_id' => Auth::user()->id
         ]);
         return redirect('/');
     }
