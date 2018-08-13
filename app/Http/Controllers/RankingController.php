@@ -9,10 +9,8 @@ use App\Product;
 use App\Review;
 use View;
 use DB;
-
 class RankingController extends Controller
 {
-    // public $layout = "layouts.review_site";
 
     public function __construct()
     {
